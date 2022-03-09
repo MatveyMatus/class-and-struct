@@ -7,9 +7,11 @@ public:
     int field_1[10][10]{},
         field_2[10][10]{};
 
-    // живучесть кораблей
-    struct lifeBoards {
+    // живучесть кораблей и их количество
+    struct lifeShips {
         int life;
+        int amountShips;
+
     };
 
 
@@ -25,10 +27,10 @@ public:
     }
 
     //созднаие живучести каждого вида коробля учитывая правила игры
-    lifeBoards torpedo_boat{1};
-    lifeBoards destroyer{2};
-    lifeBoards cruiser{3};
-    lifeBoards carrier{4};
+    lifeShips torpedo_boat{1,4};
+    lifeShips destroyer{2,3};
+    lifeShips cruiser{3,2};
+    lifeShips carrier{4,1};
 
     void dispositionBoards() {
         // формуруем расположение кораблей в поле то есть редактируем это поле
